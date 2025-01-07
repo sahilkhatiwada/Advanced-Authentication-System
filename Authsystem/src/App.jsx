@@ -1,19 +1,16 @@
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Login from './components/Login.jsx'
+import SignUp from './components/SignUp.jsx'
 
-import { useState } from 'react'
-import './App.css'
-import Login from './components/Login'
-import SignUp from './components/SignUp'
 
-function App() {
-  const [login,setLogin] = useState(false)
-
+const App = () => {
   return (
-    <>
-    {
-      login?<Login/>:<SignUp/>
-    }
-      
-    </>
+    <Routes>
+   
+      <Route path='/' element={<Login/>}></Route>
+      <Route path='/sign-Up' element={<SignUp/>}></Route>
+    </Routes>
   )
 }
 
